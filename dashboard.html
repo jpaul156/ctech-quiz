@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Training Dashboard</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="ControlTech_Logo_BULB.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .dash { max-width: 1240px; margin: 0 auto; padding: 24px 28px 64px; }
+    .dhead { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 22px; }
+    .dhead img { height: 38px; }
+    .dhead h1 { font-size: 22px; font-weight: 900; margin: 0; flex: 1; }
+    .dhead select { width: auto; padding: 8px 12px; font-size: 15px; }
+    .dhead .btn { padding: 9px 16px; font-size: 13px; }
+    .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 18px; }
+    .kpi { background: var(--card); border: 2px solid var(--line); border-radius: 16px; padding: 16px 18px; }
+    .kpi .l { font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .kpi .v { font-size: 30px; font-weight: 900; }
+    .grid2 { display: grid; grid-template-columns: 1.6fr 1fr; gap: 18px; align-items: start; }
+    .panel h2 small { font-weight: 600; color: var(--muted); font-size: 13px; margin-left: 6px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th { text-align: left; font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding: 8px 10px; border-bottom: 2px solid var(--line); }
+    td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    tr.click { cursor: pointer; }
+    tr.click:hover td { background: var(--bg); }
+    tr.active td { background: var(--green-soft); }
+    .num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .meter { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
+    .meter .bar { width: 70px; height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; }
+    .meter .bar i { display: block; height: 100%; border-radius: 99px; }
+    .pill { display: inline-block; font-size: 12px; font-weight: 800; padding: 2px 9px; border-radius: 99px; background: var(--green-soft); color: var(--green-dark); }
+    .pill.bad { background: var(--red-soft); color: var(--red-dark); }
+    .wrongs { font-size: 13px; color: var(--red-dark); margin-top: 4px; }
+    .topic { margin: 10px 0 14px; }
+    .topic .row { display: flex; justify-content: space-between; font-weight: 700; font-size: 14px; }
+    .topic .track { height: 12px; background: var(--line); border-radius: 99px; overflow: hidden; margin-top: 5px; }
+    .topic .track i { display: block; height: 100%; background: var(--green); border-radius: 99px; }
+    .empty { text-align: center; padding: 60px 20px; color: var(--muted); }
+    .gate { max-width: 420px; margin: 12vh auto; text-align: center; }
+    @media (max-width: 900px) { .grid2, .kpis { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main id="app" class="dash"></main>
+
+  <script src="config.js"></script>
+  <script src="store.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

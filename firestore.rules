@@ -1,0 +1,30 @@
+rules_version = '2';
+
+// Paste into Firebase console > Firestore Database > Rules, edit the two
+// lists below, and click Publish.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Who can open the dashboard (read everyone's results).
+    function isAdmin() {
+      return signedIn() && request.auth.token.email.lower() in [
+        'you@yourcompany.com'
+      ];
+    }
+
+    // Only work emails can save results. Change the domain to yours.
+    function signedIn() {
+      return request.auth != null
+        && request.auth.token.email_verified == true
+        && request.auth.token.email.lower().matches('.*@yourcompany[.]com$');
+    }
+
+    match /results/{id} {
+      // Techs can add their own answers, but can't read, change or delete anything.
+      allow create: if signedIn()
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.email == request.auth.token.email;
+      allow read, update, delete: if isAdmin();
+    }
+  }
+}

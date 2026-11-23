@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360" viewBox="0 0 800 360">
+  <rect width="800" height="360" fill="#eef0ec"/>
+  <rect x="20" y="20" width="760" height="40" rx="6" fill="#d9dcd6"/>
+  <text x="40" y="46" font-family="Segoe UI, Arial" font-size="16" fill="#555">Placeholder screenshot: replace with images/your-file.png</text>
+  <g font-family="Segoe UI, Arial" font-size="15" fill="#333">
+    <rect x="20" y="80" width="760" height="44" fill="#fff"/><text x="40" y="108">2-214-Downlights</text>
+    <rect x="20" y="128" width="760" height="44" fill="#fff"/><text x="40" y="156">2-214-Wallwash</text>
+    <rect x="20" y="176" width="760" height="44" fill="#fff"/><text x="40" y="204">2-216-Downlights</text>
+    <rect x="20" y="224" width="760" height="44" fill="#fde9e9"/><text x="40" y="252">Zone 14</text>
+    <rect x="20" y="272" width="760" height="44" fill="#fde9e9"/><text x="40" y="300">Zone 15</text>
+  </g>
+</svg>
