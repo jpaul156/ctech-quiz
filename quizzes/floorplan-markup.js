@@ -49,7 +49,7 @@ window.QUIZZES.push({
       choices: [
         { text: "Highlight in yellow", image: "images/markup/fixture-yellow.svg", explanation: "Yellow means something else on our markup. A dimming problem needs its own color so it gets fixed." },
         { text: "Highlight in red", image: "images/markup/fixture-red.svg", explanation: "Red is for inaccessible rooms. A red fixture reads as an access problem, not a dimming problem." },
-        { text: "Cry", explanation: "Understandable, but tears don't show up on the floorplan. Mark it so it gets fixed." },
+        { text: "Cry", image: "images/markup/loudly-crying-face.svg", explanation: "Understandable, but tears don't show up on the floorplan. Mark it so it gets fixed." },
         { text: "Highlight in purple", image: "images/markup/fixture-purple.svg", correct: true },
       ],
     },
